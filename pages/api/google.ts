@@ -11,8 +11,7 @@ export default async function handler(
 
 
   const code = req.query.code
-  const userData: Student | Professor | { type: string } = await getUserInfo(code as string)
-  console.log(userData)
+  const userData = await getUserInfo(code as string) as any
 
   let result = ''
   Object.keys(userData).map(i => {
