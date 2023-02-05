@@ -8,7 +8,7 @@ type Props = {
   authUrl: string
 }
 
-const Home: NextPage = (props: Props) => {
+const Home = (props: Props) => {
 
   const onClick = () => {
     Router.push(props.authUrl)
